@@ -1115,7 +1115,12 @@ a {
 
 @media (max-width: 460px) {
   :root {
-    --gutter: 18px;
+    --gutter: 16px;
+  }
+
+  .portfolio-shell {
+    width: min(calc(100% - 16px), 1440px);
+    margin-block: 8px;
   }
 
   .main-nav {
@@ -1128,11 +1133,14 @@ a {
     white-space: nowrap;
   }
 
-  .main-nav a:nth-child(2) {
+  .main-nav a:nth-child(2),
+  .main-nav a:nth-child(3),
+  .main-nav a:nth-child(4) {
     display: none;
   }
 
   .main-nav .nav-resume {
+    flex: 0 0 auto;
     padding-inline: 9px;
   }
 
